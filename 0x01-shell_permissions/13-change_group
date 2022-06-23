@@ -1,2 +1,2 @@
 #!/bin/bash
-chgroup hello school
+chown hello school

@@ -67,4 +67,4 @@ file 				Description
 			>STIR is in base stir.
 			>The result should be in base bestchol
 
-THENK YOU!
+THANK YOU!

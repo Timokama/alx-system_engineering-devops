@@ -17,11 +17,11 @@ We are symbols, and inhabit symbols Create symlink to /bin/ls called __ls__ in c
 Copy HTML files Copy HTML files from ucurrent diectory that are absent or newer than copies in parent directory.
 Let's move Move files beginningg with uppercaseletter to /tmp/u.
 Clean Emacs Remove files ending with ~.
-Tree Create welcome/to/holberton/ in one line.
+Tree Create welcome/to/school/ in one line.
 Life is a series of commas, not periods List all files and directories in current directory:
 Directories end with /
 Include hidden files
 Alphanumeric ordering
 Sort only with digits and letters
 Listing should endd with new line
-File type: Holberton Magic file holberton.mgc to be used with file command to detect files with string HOLBERTON at byte-offset 0.
+File type: School Magic file holberton.mgc to be used with file command to detect files with string HOLBERTON at byte-offset 0.

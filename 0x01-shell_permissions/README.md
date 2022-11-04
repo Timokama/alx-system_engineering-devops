@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 0x01. Shell, permissions
 Answers to exercises from 0x01 Shell, permissions
 
@@ -38,3 +39,6 @@ If only Write a script that changes the owner of the file hello to betty only if
 The file hello will be in the working directory
 Star Wars Write a script that will play the StarWars IV episode in the terminal.
 RTFM Create a man that looks exactly like this one and passes all checks.
+=======
+My first readme
+>>>>>>> parent of 0921f1d... Command line for the win

@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 ls -al . .. /boot
+=======
+ls -la . .. /boot
+>>>>>>> parent of 0921f1d... Command line for the win

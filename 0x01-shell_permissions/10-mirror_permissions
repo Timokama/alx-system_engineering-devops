@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 chmod --reference=olleh hello
+=======
+#!/bin/bash
+chmod --reference=olleh hello 
+>>>>>>> parent of 0921f1d... Command line for the win

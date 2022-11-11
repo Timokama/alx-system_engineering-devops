@@ -1,6 +1,6 @@
 #!/usr/usr/bin/env bash
 # infinity loop
-while :
+while true
 do
 	echo "To infinity and beyond"
 	sleep 2

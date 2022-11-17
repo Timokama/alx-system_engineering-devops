@@ -1,4 +1,5 @@
 0x07-networking_basics
+<<<<<<< HEAD
 0. OSI model mandatory
 OSI (Open Systems Interconnection) is an abstract model to describe layered communication and computer network design. The idea is to segregate the different parts of what make communication possible.
 
@@ -114,3 +115,5 @@ Accepts a string as an argument
 Displays Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed
 Ping the IP 5 times
 Example:
+=======
+>>>>>>> 926fc87a151bffe5bf3c0a6a7c750f2e7eea8e73

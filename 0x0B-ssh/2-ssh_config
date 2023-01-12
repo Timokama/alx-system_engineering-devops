@@ -1,0 +1,5 @@
+Host Timothy
+	HostName Timothy
+	User Vagrant
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no

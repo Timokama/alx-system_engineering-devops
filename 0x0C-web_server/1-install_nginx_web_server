@@ -1,33 +1,13 @@
 #!/usr/bin/env bash
-# Install and setup new nginx server
+# Script that transfer a file to a server
 
-apt-get update -y && \
-apt-get install -y nginx
-if [ $? -eq 0 ]
+if [ "$#" -lt 3 ]
 then
-    echo -e \
-"http {
-    root /var/www/school;
-    index index.html;
-    server {
-        listen 80;
-        location \ {
-        }
-    }
-}
-events {
-}" > /etc/nginx/nginx.conf
-    mkdir -p /var/www/holberton
-    echo "Hello World!" > \
-	/var/www/school/index.html
-    service nginx start
-    if [ $? -ne 0 ]
-    then
-	"Problem starting nginx"
-	exit 1
-    fi
-else
-    echo "Could not install nginx"
-    exit 1
+    echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+elif [ "$#" -ge 4 ]
+then
+    scp -o StrictHostKeyChecking=no -i "$4" "$1" "$3@$2:~/"
+elif [ "$#" -eq 3 ]
+then
+    scp -o StrictHostKeyChecking=no "$1" "$3@$2:~/"
 fi
-exit 0

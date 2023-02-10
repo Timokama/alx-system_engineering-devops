@@ -1,45 +1,36 @@
 #!/usr/bin/python3
-"""Script to get information from the TODO api endpoint as it
-pertains to a particular employee identified by ID."""
+
+"""
+Python script that exports data in the JSON format.
+"""
+
+from requests import get
 import json
-import requests
-
-todo_endpoint = "https://jsonplaceholder.typicode.com/todos"
-user_endpoint = "https://jsonplaceholder.typicode.com/users"
-
-def get_all_todos():
-    """Get TODO lists for all users identified by `user_id`"""
-    todos = requests.get(todo_endpoint)
-    try:
-        return todos.json()
-    except:
-        exit(1)
-
-
-def get_all_users():
-    """Get all users"""
-    users = requests.get(user_endpoint)
-    try:
-        return users.json()
-    except:
-        exit(1)
-
-
-def export_json_user_todos():
-    """Export employee TODO lists to a json file"""
-    todos = get_all_todos()
-    users = get_all_users()
-    data = {
-            u['id']: [dict(task=todo.get('title'),
-                           completed=todo.get('completed'),
-                           username=u.get('username'))
-
-                      for todo in filter(
-                              lambda t: t.get('userId') == u.get('id'), todos
-                      )] for u in users
-    }
-    with open("todo_all_employees.json", 'w') as f:
-        json.dump(data, f)
 
 if __name__ == "__main__":
-    export_json_user_todos()
+    response = get('https://jsonplaceholder.typicode.com/todos/')
+    data = response.json()
+
+    row = []
+    response2 = get('https://jsonplaceholder.typicode.com/users')
+    data2 = response2.json()
+
+    new_dict1 = {}
+
+    for j in data2:
+        row = []
+    
+    for i in data:
+        new_dict2 = {}
+    
+    if j['id'] == i['userId']:
+        new_dict2['username'] = j['username']
+        new_dict2['task'] = i['title']
+        new_dict2['completed'] = i['completed']
+        row.append(new_dict2)
+
+        new_dict1[j['id']] = row
+
+    with open("todo_all_employees.json",  "w") as f:
+        json_obj = json.dumps(new_dict1)
+        f.write(json_obj)
